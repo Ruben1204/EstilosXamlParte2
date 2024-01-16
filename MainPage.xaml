@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstilosXamlSecondPart.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="BoxView"
+               Class="Separator">
+            <Setter Property="BackgroundColor" Value="#CCCCCC"/>
+            <Setter Property="HeightRequest" Value="1"/>
+        </Style>
+
+        <Style TargetType="BoxView"
+               Class="Rounded">
+            <Setter Property="BackgroundColor" Value="#1FAECE"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            
+        </Style>
+
+        <Style TargetType="BoxView"
+               Class="Circle">
+            <Setter Property="BackgroundColor" Value="#1FAECE"/>
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="CornerRadius" Value="50"/>
+        </Style>
+
+        <Style TargetType="VisualElement"
+               Class="Rotated"
+               ApplyToDerivedTypes="True">
+            <Setter Property="Rotation" Value="45"/>
+
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="20">
+        <BoxView StyleClass="Separator"/>
+        <BoxView WidthRequest="100"
+                 HeightRequest="100"
+                 HorizontalOptions="Center"
+                 StyleClass="Rounded, Rotated"/>
+        <BoxView HorizontalOptions="Center"
+                 StyleClass="Circle"/>
+    </StackLayout>
+
+    <!--<ContentPage.Resources>
+        <Style x:Key="estiloBase"
+               TargetType="View">
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+        <Style x:Key="blueSearchBar"
+               TargetType="SearchBar"
+               BasedOn="{StaticResource estiloBase}">
+            <Setter Property="FontAttributes" Value="Italic"/>
+            <Setter Property="PlaceholderColor" Value="Blue"/>
+        </Style>
+
+        <Style x:Key="greenSearchBar"
+               TargetType="SearchBar"
+               BasedOn="{StaticResource estiloBase}">
+            <Setter Property="FontAttributes" Value="None"/>
+            <Setter Property="PlaceholderColor" Value="Green"/>
+        </Style>
+
+        <Style x:Key="tealSearchBarStyle"
+               TargetType="SearchBar"
+               BaseResourceKey="blueSearchBar">
+            <Setter Property="BackgroundColor" Value="Teal"/>
+            <Setter Property="CancelButtonColor" Value="White"/>
+        </Style>
+    </ContentPage.Resources>-->
+
+    <!--<StackLayout>
+        <SearchBar Placeholder="Demostracion de estilos dinamicos en un searchBar y herencia"
+                   Style="{StaticResource tealSearchBarStyle}"/>
+
+        <Button Clicked="Button_Clicked"
+                Text="Actualizar Color"/>
+    </StackLayout>-->
+
+</ContentPage>
